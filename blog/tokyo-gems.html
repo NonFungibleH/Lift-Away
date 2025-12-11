@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Best Gyms in Tokyo for Travelers - LiftAway Blog</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #fff;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2DD4BF;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            color: #666;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #2DD4BF;
+        }
+
+        .nav-menu a.active {
+            color: #2DD4BF;
+            font-weight: 600;
+        }
+
+        /* Article Header */
+        .article-header {
+            padding: 60px 0 40px;
+            text-align: center;
+            background: linear-gradient(135deg, #f0fdfa 0%, #fef3f2 100%);
+        }
+
+        .article-category {
+            color: #2DD4BF;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+
+        .article-header h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 24px;
+            color: #1a1a1a;
+            line-height: 1.2;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            color: #666;
+            font-size: 16px;
+        }
+
+        /* Article Content */
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .article-content h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-top: 48px;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+
+        .article-content h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-top: 36px;
+            margin-bottom: 16px;
+            color: #2DD4BF;
+        }
+
+        .article-content p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 24px;
+            color: #333;
+        }
+
+        .article-content ul {
+            margin-bottom: 24px;
+            padding-left: 24px;
+        }
+
+        .article-content li {
+            font-size: 18px;
+            margin-bottom: 12px;
+            color: #333;
+        }
+
+        .article-content strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .gym-card {
+            background: linear-gradient(135deg, #f0fdfa 0%, #fef3f2 100%);
+            padding: 32px;
+            border-radius: 16px;
+            margin: 40px 0;
+            border-left: 4px solid #2DD4BF;
+        }
+
+        .gym-card h3 {
+            margin-top: 0;
+        }
+
+        .gym-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: #666;
+        }
+
+        .callout {
+            background: #fff5f3;
+            border-left: 4px solid #FF6B5E;
+            padding: 24px;
+            margin: 32px 0;
+            border-radius: 4px;
+        }
+
+        .callout p {
+            margin: 0;
+            font-style: italic;
+        }
+
+        /* Back to Blog */
+        .back-to-blog {
+            text-align: center;
+            padding: 60px 0;
+            border-top: 1px solid #e5e5e5;
+        }
+
+        .back-to-blog a {
+            color: #2DD4BF;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 18px;
+        }
+
+        .back-to-blog a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid #e5e5e5;
+            text-align: center;
+            background: #fff;
+        }
+
+        footer p {
+            color: #666;
+        }
+
+        footer a {
+            color: #2DD4BF;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .article-header h1 {
+                font-size: 32px;
+            }
+
+            .article-content h2 {
+                font-size: 26px;
+            }
+
+            .article-content h3 {
+                font-size: 20px;
+            }
+
+            .article-content p,
+            .article-content li {
+                font-size: 16px;
+            }
+
+            .gym-info {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-menu {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="../index.html" class="logo">💪 LiftAway</a>
+            <div class="nav-menu">
+                <a href="../pages/about.html">About</a>
+                <a href="index.html" class="active">Blog</a>
+                <a href="../pages/contact.html">Contact</a>
+                <a href="../index.html#download">Download</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="article-header">
+        <div class="container">
+            <div class="article-category">TRAVEL GUIDE</div>
+            <h1>5 Best Gyms in Tokyo for Travelers: Your Complete Training Guide</h1>
+            <div class="article-meta">
+                <span>By Howard Chen</span>
+                <span>•</span>
+                <span>5 min read</span>
+                <span>•</span>
+                <span>December 11, 2024</span>
+            </div>
+        </div>
+    </section>
+
+    <article class="article-content">
+        <p>Tokyo can be overwhelming for first-time visitors, especially when you're trying to maintain your training routine. After spending three months exploring the city's fitness scene, I've narrowed down the absolute best spots for travelers who refuse to skip leg day.</p>
+
+        <p>Whether you're a powerlifter looking for serious equipment, a CrossFitter seeking a drop-in friendly box, or just someone who wants a clean gym with reliable basics, this guide has you covered.</p>
+
+        <h2>What You Need to Know Before You Go</h2>
+
+        <p>Training in Tokyo comes with a few quirks compared to Western gyms:</p>
+
+        <ul>
+            <li><strong>Shoe etiquette matters.</strong> Most gyms require you to change into indoor training shoes. Don't wear the same shoes you walked in with.</li>
+            <li><strong>Tattoos can be an issue.</strong> While attitudes are changing, some gyms still have strict no-tattoo policies. Call ahead or be prepared to cover them.</li>
+            <li><strong>English isn't guaranteed.</strong> Staff may not speak English, so having Google Translate ready helps. That said, gym culture is universal—people are friendly once you're there.</li>
+            <li><strong>Day passes exist but vary.</strong> Some gyms offer tourist-friendly drop-ins; others require membership. I've noted which ones welcome travelers.</li>
+        </ul>
+
+        <h2>The Best Gyms in Tokyo</h2>
+
+        <div class="gym-card">
+            <h3>1. Gold's Gym Harajuku</h3>
+            <p>If you're serious about lifting, this is your spot. Gold's Gym Harajuku is Tokyo's premier bodybuilding and powerlifting facility, packed with equipment most commercial gyms only dream of having.</p>
+            
+            <p><strong>What makes it great:</strong> Multiple squat racks, dedicated deadlift platforms, Olympic lifting area, and enough free weights to keep you busy for hours. The atmosphere is pure iron—no nonsense, just focused training.</p>
+
+            <div class="gym-info">
+                <div class="info-item">
+                    <span class="info-label">📍 Location:</span>
+                    <span>Harajuku, Shibuya</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">💰 Day Pass:</span>
+                    <span>¥2,700 (~$18 USD)</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">🕐 Hours:</span>
+                    <span>24/7 (with membership)</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">✅ Tourist Friendly:</span>
+                    <span>Yes</span>
+                </div>
+            </div>
+
+            <p style="margin-top: 20px;"><strong>Pro tip:</strong> Go during off-peak hours (10am-3pm) to avoid the lunch rush. The locker rooms are spotless, and there's a protein bar if you need a quick shake.</p>
+        </div>
+
+        <div class="gym-card">
+            <h3>2. Anytime Fitness Shibuya</h3>
+            <p>The beauty of Anytime Fitness is consistency. If you're an AF member back home, you can use any location worldwide—including this Shibuya spot.</p>
+            
+            <p><strong>What makes it great:</strong> Clean, reliable, and right in the heart of Shibuya. It's not huge, but it has everything you need for a solid workout: cable machines, free weights, cardio equipment, and it's never absurdly crowded.</p>
+
+            <div class="gym-info">
+                <div class="info-item">
+                    <span class="info-label">📍 Location:</span>
+                    <span>Shibuya Station area</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">💰 Day Pass:</span>
+                    <span>Free with membership</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">🕐 Hours:</span>
+                    <span>24/7</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">✅ Tourist Friendly:</span>
+                    <span>Members only</span>
+                </div>
+            </div>
+
+            <p style="margin-top: 20px;"><strong>Pro tip:</strong> If you're staying near Shibuya, this is your most convenient option. Staff speak some English, and the vibe is welcoming to foreigners.</p>
+        </div>
+
+        <div class="gym-card">
+            <h3>3. Tipness Roppongi</h3>
+            <p>Tipness is one of Japan's largest gym chains, and the Roppongi location is particularly expat-friendly. It's a full-service facility with everything from weights to pools to group classes.</p>
+            
+            <p><strong>What makes it great:</strong> This is where you go if you want more than just weights. Sauna, hot baths, yoga studio, and a solid weight room make this feel like a resort. Perfect if you're mixing leisure with training.</p>
+
+            <div class="gym-info">
+                <div class="info-item">
+                    <span class="info-label">📍 Location:</span>
+                    <span>Roppongi</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">💰 Day Pass:</span>
+                    <span>¥3,300 (~$22 USD)</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">🕐 Hours:</span>
+                    <span>Varies (typically 9am-11pm)</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">✅ Tourist Friendly:</span>
+                    <span>Yes</span>
+                </div>
+            </div>
+
+            <p style="margin-top: 20px;"><strong>Pro tip:</strong> Come for the workout, stay for the onsen-style bath. It's a Japanese gym experience you won't find elsewhere.</p>
+        </div>
+
+        <div class="gym-card">
+            <h3>4. CrossFit Roppongi</h3>
+            <p>If you're a CrossFitter, this is your Tokyo home. CrossFit Roppongi welcomes drop-ins and has a strong international community of expats and travelers.</p>
+            
+            <p><strong>What makes it great:</strong> Full CrossFit setup with bumper plates, rigs, rowers, and assault bikes. Classes are run in English, and the community vibe is unmatched. Everyone's friendly, and you'll likely make workout buddies within your first visit.</p>
+
+            <div class="gym-info">
+                <div class="info-item">
+                    <span class="info-label">📍 Location:</span>
+                    <span>Roppongi</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">💰 Drop-in:</span>
+                    <span>¥3,500 (~$24 USD)</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">🕐 Hours:</span>
+                    <span>Check class schedule</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">✅ Tourist Friendly:</span>
+                    <span>Very</span>
+                </div>
+            </div>
+
+            <p style="margin-top: 20px;"><strong>Pro tip:</strong> Email ahead to reserve your spot in class. Popular times fill up quickly, especially evenings.</p>
+        </div>
+
+        <div class="gym-card">
+            <h3>5. Muscle Gym Tokyo</h3>
+            <p>This is Tokyo's underground lifting gem. Small, no-frills, and filled with dedicated lifters. If you're looking for authenticity and old-school iron, Muscle Gym delivers.</p>
+            
+            <p><strong>What makes it great:</strong> The equipment is vintage but functional. Atmosphere is pure lifting culture—no corporate feel, just barbells and hard work. You'll see everyone from bodybuilders to strongman competitors here.</p>
+
+            <div class="gym-info">
+                <div class="info-item">
+                    <span class="info-label">📍 Location:</span>
+                    <span>Akihabara</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">💰 Day Pass:</span>
+                    <span>¥1,500 (~$10 USD)</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">🕐 Hours:</span>
+                    <span>10am-10pm</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">✅ Tourist Friendly:</span>
+                    <span>Yes (cash only)</span>
+                </div>
+            </div>
+
+            <p style="margin-top: 20px;"><strong>Pro tip:</strong> Bring cash and be ready to communicate with gestures. The owner is friendly but doesn't speak much English. That said, if you know how to squat, bench, and deadlift, you'll fit right in.</p>
+        </div>
+
+        <div class="callout">
+            <p><strong>Quick note on pricing:</strong> Tokyo gym rates are generally higher than Western cities, but the quality and cleanliness are exceptional. Most facilities are spotless, equipment is well-maintained, and you get what you pay for.</p>
+        </div>
+
+        <h2>Final Thoughts</h2>
+
+        <p>Training in Tokyo doesn't have to be complicated. Whether you're dropping in for a single session or planning to train throughout your stay, these five gyms will keep your routine intact.</p>
+
+        <p>My personal recommendation? If you're serious about lifting, start with Gold's Gym Harajuku. If you want a full facility experience with saunas and pools, go with Tipness Roppongi. And if you just need something reliable and familiar, Anytime Fitness won't disappoint.</p>
+
+        <p>Most importantly: don't let travel be an excuse. Tokyo has world-class fitness facilities—use them.</p>
+
+        <p><strong>Using LiftAway?</strong> All these gyms are already on the app with reviews, equipment lists, and check-in options. Download it before your trip to find even more spots and earn your Tokyo passport stamp.</p>
+    </article>
+
+    <div class="back-to-blog">
+        <a href="index.html">← Back to all posts</a>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 LiftAway by 3uild LLC. Built for travelers who never skip leg day.</p>
+            <p style="margin-top: 12px;">
+                <a href="../pages/privacy-policy.html">Privacy Policy</a> • 
+                <a href="../pages/terms-of-service.html">Terms of Service</a> • 
+                <a href="../pages/contact.html">Contact</a>
+            </p>
+            <p style="margin-top: 16px;">
+                <a href="#" style="display: inline-block; text-decoration: none;" title="Follow us on Instagram" aria-label="Instagram">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="#2DD4BF"/>
+                    </svg>
+                </a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
