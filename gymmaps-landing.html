@@ -164,12 +164,21 @@
             background: #fff;
         }
 
-        /* Main Features - Large Cards */
+        /* Main Features - 2x2 Grid */
         .main-features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 24px;
             margin-bottom: 80px;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: 768px) {
+            .main-features {
+                grid-template-columns: 1fr;
+            }
         }
 
         .main-feature-card {
@@ -211,6 +220,11 @@
 
         .stamps {
             background: linear-gradient(135deg, #34D399 0%, #10B981 100%);
+            color: white;
+        }
+
+        .favorites {
+            background: linear-gradient(135deg, #FFA85C 0%, #FF8FAB 100%);
             color: white;
         }
 
@@ -499,7 +513,7 @@
 
     <section class="features">
         <div class="container">
-            <!-- Main Features - Big and Bold -->
+            <!-- Main Features - 2x2 Grid -->
             <div class="main-features">
                 <div class="main-feature-card discover">
                     <div class="feature-content">
@@ -524,31 +538,39 @@
                         <p>Check in at gyms to collect passport stamps for each city. Track your fitness journey around the world.</p>
                     </div>
                 </div>
+
+                <div class="main-feature-card favorites">
+                    <div class="feature-content">
+                        <div class="feature-number">04</div>
+                        <h3>❤️ Save & Filter Your Favorites</h3>
+                        <p>Build your go-to gym list and filter by type - CrossFit, powerlifting, yoga, climbing, and more.</p>
+                    </div>
+                </div>
             </div>
 
             <!-- Secondary Features - Quick Highlights -->
             <div class="secondary-features">
-                <h3 class="secondary-title">More Features to Keep You Moving</h3>
+                <h3 class="secondary-title">Plus, Contribute & Grow</h3>
                 <div class="quick-features">
-                    <div class="quick-feature">
-                        <span class="quick-icon">❤️</span>
-                        <div>
-                            <strong>Save Favorites</strong>
-                            <p>Build your go-to gym list</p>
-                        </div>
-                    </div>
-                    <div class="quick-feature">
-                        <span class="quick-icon">🔍</span>
-                        <div>
-                            <strong>Filter by Type</strong>
-                            <p>CrossFit, powerlifting, yoga & more</p>
-                        </div>
-                    </div>
                     <div class="quick-feature">
                         <span class="quick-icon">✓</span>
                         <div>
-                            <strong>Verify & Earn</strong>
-                            <p>Contribute to the community, gain points</p>
+                            <strong>Verify Gyms</strong>
+                            <p>Help keep info accurate and up-to-date</p>
+                        </div>
+                    </div>
+                    <div class="quick-feature">
+                        <span class="quick-icon">🏆</span>
+                        <div>
+                            <strong>Earn Points</strong>
+                            <p>Level up as you contribute to the community</p>
+                        </div>
+                    </div>
+                    <div class="quick-feature">
+                        <span class="quick-icon">🌟</span>
+                        <div>
+                            <strong>Build Your Passport</strong>
+                            <p>Unlock achievements and track your progress</p>
                         </div>
                     </div>
                 </div>
