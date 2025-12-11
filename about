@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - LiftAway</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #fff;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2DD4BF;
+            text-decoration: none;
+        }
+
+        .nav-link {
+            color: #666;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #2DD4BF;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #f0fdfa 0%, #fef3f2 100%);
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 800;
+            margin-bottom: 24px;
+            color: #1a1a1a;
+            line-height: 1.2;
+        }
+
+        .hero .highlight {
+            color: #2DD4BF;
+        }
+
+        .hero p {
+            font-size: 24px;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Story Section */
+        .story-section {
+            padding: 80px 0;
+        }
+
+        .story-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .story-content h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: #1a1a1a;
+        }
+
+        .story-content p {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 24px;
+            line-height: 1.8;
+        }
+
+        .story-content .callout {
+            background: linear-gradient(135deg, #f0fdfa 0%, #fef3f2 100%);
+            padding: 32px;
+            border-radius: 16px;
+            border-left: 4px solid #2DD4BF;
+            margin: 40px 0;
+        }
+
+        .story-content .callout p {
+            font-size: 20px;
+            font-weight: 500;
+            color: #1a1a1a;
+            margin: 0;
+            font-style: italic;
+        }
+
+        /* Mission Section */
+        .mission-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f0fdfa 0%, #fef3f2 100%);
+        }
+
+        .mission-section h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 48px;
+            text-align: center;
+            color: #1a1a1a;
+        }
+
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+        }
+
+        .mission-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 16px;
+            border: 2px solid #e5e5e5;
+            transition: all 0.3s;
+        }
+
+        .mission-card:hover {
+            transform: translateY(-4px);
+            border-color: #2DD4BF;
+            box-shadow: 0 8px 24px rgba(45, 212, 191, 0.1);
+        }
+
+        .mission-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .mission-card h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #1a1a1a;
+        }
+
+        .mission-card p {
+            color: #666;
+            font-size: 16px;
+            margin: 0;
+        }
+
+        /* Values Section */
+        .values-section {
+            padding: 80px 0;
+        }
+
+        .values-section h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 48px;
+            text-align: center;
+            color: #1a1a1a;
+        }
+
+        .values-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .value-item {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .value-number {
+            font-size: 48px;
+            font-weight: 800;
+            color: #2DD4BF;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+
+        .value-content h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #1a1a1a;
+        }
+
+        .value-content p {
+            color: #666;
+            font-size: 16px;
+            margin: 0;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #FF6B5E 0%, #FF8FAB 50%, #2DD4BF 100%);
+            color: #fff;
+        }
+
+        .cta-section h2 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 20px;
+            margin-bottom: 32px;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #fff;
+            color: #FF6B5E;
+            padding: 16px 40px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: rgba(255, 255, 255, 0.95);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid #e5e5e5;
+            text-align: center;
+            background: #fff;
+        }
+
+        footer p {
+            color: #666;
+        }
+
+        footer a {
+            color: #2DD4BF;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .story-content h2,
+            .mission-section h2,
+            .values-section h2 {
+                font-size: 28px;
+            }
+
+            .story-content p {
+                font-size: 16px;
+            }
+
+            .mission-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .value-item {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .cta-section h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">💪 LiftAway</a>
+            <a href="index.html" class="nav-link">Back to Home</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Helping Gym-Goers Continue<br><span class="highlight">Smashing It Wherever They Go</span></h1>
+            <p>We believe your fitness journey shouldn't stop just because you're away from home.</p>
+        </div>
+    </section>
+
+    <section class="story-section">
+        <div class="container">
+            <div class="story-content">
+                <h2>The Story Behind LiftAway</h2>
+                
+                <p>Picture this: You've just landed in a new city for work. Your routine is dialed in at home—you know your gym, your favorite equipment, the best times to go. But now? You're staring at Google Maps, scrolling through dozens of gyms with no idea which one actually has what you need.</p>
+
+                <p>Does this place have squat racks or just a couple of Smith machines? Is it actually clean? Will it be packed at 6 PM? These aren't just nice-to-knows—they're the difference between maintaining your progress and losing momentum.</p>
+
+                <div class="callout">
+                    <p>"Travel shouldn't mean choosing between your fitness goals and exploring the world. It should mean both."</p>
+                </div>
+
+                <p>We built LiftAway because we lived this frustration. As digital nomads and frequent travelers who take training seriously, we were tired of the guessing game. Tired of walking into gyms that looked nothing like their photos. Tired of losing our workout streak because we couldn't find a decent gym in time.</p>
+
+                <p>We realized that millions of people—travelers, digital nomads, business professionals, athletes—face this same challenge every single day. The information exists in people's heads and scattered across forums, but there's no single place that captures it all.</p>
+
+                <h2 style="margin-top: 60px;">Why LiftAway Exists</h2>
+
+                <p>LiftAway exists to remove the friction between you and your workout, no matter where you are in the world. We're building a community of gym-goers who help each other stay consistent, discover great training spots, and turn fitness into a way to connect with new places.</p>
+
+                <p>Every check-in, every review, every photo you share helps another traveler avoid a bad gym and find a great one. You're not just tracking your own journey—you're helping thousands of others maintain theirs.</p>
+
+                <p>Because the truth is: consistency beats perfection. And staying consistent is a lot easier when you know exactly where to go and what to expect when you get there.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="mission-section">
+        <div class="container">
+            <h2>What We Stand For</h2>
+            <div class="mission-grid">
+                <div class="mission-card">
+                    <div class="mission-icon">🌍</div>
+                    <h3>Community First</h3>
+                    <p>Real reviews from real gym-goers. No sponsored listings, no fake ratings. Just honest insights to help you make the best choice.</p>
+                </div>
+
+                <div class="mission-card">
+                    <div class="mission-icon">💪</div>
+                    <h3>Never Break the Chain</h3>
+                    <p>Your routine matters. We make it ridiculously easy to find gyms that fit your training style, so nothing disrupts your progress.</p>
+                </div>
+
+                <div class="mission-card">
+                    <div class="mission-icon">✈️</div>
+                    <h3>Fitness as Adventure</h3>
+                    <p>Turn gym hunting into part of the journey. Collect stamps, discover hidden gems, and connect your training to the places you explore.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="values-section">
+        <div class="container">
+            <h2>Our Values</h2>
+            <div class="values-list">
+                <div class="value-item">
+                    <div class="value-number">01</div>
+                    <div class="value-content">
+                        <h3>Transparency Over Everything</h3>
+                        <p>We show you exactly what's there. No marketing fluff, no hidden fees, no surprises. Just the truth from people who've actually been there.</p>
+                    </div>
+                </div>
+
+                <div class="value-item">
+                    <div class="value-number">02</div>
+                    <div class="value-content">
+                        <h3>Simplicity is Power</h3>
+                        <p>You need answers fast. We cut through the noise and get you the information that matters—equipment, cleanliness, vibe—in seconds.</p>
+                    </div>
+                </div>
+
+                <div class="value-item">
+                    <div class="value-number">03</div>
+                    <div class="value-content">
+                        <h3>Your Data is Yours</h3>
+                        <p>We don't sell your information. We don't track you for ads. We exist to serve gym-goers, period.</p>
+                    </div>
+                </div>
+
+                <div class="value-item">
+                    <div class="value-number">04</div>
+                    <div class="value-content">
+                        <h3>Global Community</h3>
+                        <p>From Tokyo to Toronto, São Paulo to Stockholm—we're building a worldwide network of people who refuse to let travel be an excuse.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Join the Movement</h2>
+            <p>Download LiftAway and never let travel disrupt your training again.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn-primary">
+                    📱 Get it on iOS
+                </a>
+                <a href="#" class="btn-primary">
+                    🤖 Get it on Android
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 LiftAway by 3uild LLC. Built for travelers who never skip leg day.</p>
+            <p style="margin-top: 12px;">
+                <a href="privacy-policy.html">Privacy Policy</a> • 
+                <a href="terms-of-service.html">Terms of Service</a> • 
+                <a href="contact.html">Contact</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
