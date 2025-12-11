@@ -59,9 +59,31 @@
 
         /* Hero Section */
         .hero {
-            padding: 80px 0 100px;
+            padding: 100px 0 120px;
             text-align: center;
-            background: linear-gradient(135deg, #f0fdfa 0%, #fef3f2 100%);
+            background: linear-gradient(135deg, #f0fdfa 0%, #fff 30%, #fef3f2 70%, #fff5f3 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '🌴';
+            position: absolute;
+            font-size: 200px;
+            opacity: 0.03;
+            top: -50px;
+            left: 10%;
+            transform: rotate(-15deg);
+        }
+
+        .hero::after {
+            content: '✈️';
+            position: absolute;
+            font-size: 150px;
+            opacity: 0.03;
+            bottom: -30px;
+            right: 10%;
+            transform: rotate(15deg);
         }
 
         .hero h1 {
@@ -70,6 +92,8 @@
             margin-bottom: 24px;
             line-height: 1.2;
             color: #1a1a1a;
+            position: relative;
+            z-index: 1;
         }
 
         .hero .highlight {
@@ -83,6 +107,8 @@
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
+            position: relative;
+            z-index: 1;
         }
 
         .cta-buttons {
@@ -90,6 +116,8 @@
             gap: 16px;
             justify-content: center;
             flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
         }
 
         .btn-primary {
@@ -136,6 +164,143 @@
             background: #fff;
         }
 
+        /* Main Features - Large Cards */
+        .main-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-bottom: 80px;
+        }
+
+        .main-feature-card {
+            position: relative;
+            padding: 60px 40px;
+            border-radius: 24px;
+            min-height: 280px;
+            display: flex;
+            align-items: flex-end;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .main-feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.1;
+            background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 100%);
+        }
+
+        .main-feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .discover {
+            background: linear-gradient(135deg, #2DD4BF 0%, #14B8A6 100%);
+            color: white;
+        }
+
+        .reviews {
+            background: linear-gradient(135deg, #FF6B5E 0%, #FF8FAB 100%);
+            color: white;
+        }
+
+        .stamps {
+            background: linear-gradient(135deg, #34D399 0%, #10B981 100%);
+            color: white;
+        }
+
+        .feature-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .feature-number {
+            font-size: 72px;
+            font-weight: 900;
+            opacity: 0.2;
+            position: absolute;
+            top: -20px;
+            right: 20px;
+            line-height: 1;
+        }
+
+        .main-feature-card h3 {
+            font-size: 28px;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .main-feature-card p {
+            font-size: 16px;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        /* Secondary Features */
+        .secondary-features {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .secondary-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: #1a1a1a;
+        }
+
+        .quick-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+        }
+
+        .quick-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            text-align: left;
+            padding: 24px;
+            background: #f9fafb;
+            border-radius: 16px;
+            transition: all 0.3s;
+        }
+
+        .quick-feature:hover {
+            background: #f0fdfa;
+            transform: translateY(-2px);
+        }
+
+        .quick-icon {
+            font-size: 32px;
+            flex-shrink: 0;
+        }
+
+        .quick-feature strong {
+            display: block;
+            font-size: 18px;
+            color: #1a1a1a;
+            margin-bottom: 4px;
+        }
+
+        .quick-feature p {
+            color: #666;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #fef3f2 0%, #f0fdfa 50%, #fef3f2 100%);
+        }
+
         .section-title {
             text-align: center;
             font-size: 42px;
@@ -144,63 +309,39 @@
             color: #1a1a1a;
         }
 
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-        }
-
-        .feature-card {
-            background: #fff;
-            padding: 40px;
-            border-radius: 16px;
-            border: 2px solid #e5e5e5;
-            transition: all 0.3s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-4px);
-            border-color: #2DD4BF;
-            box-shadow: 0 8px 24px rgba(45, 212, 191, 0.1);
-        }
-
-        .feature-icon {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        .feature-card h3 {
-            font-size: 24px;
-            margin-bottom: 12px;
-            color: #1a1a1a;
-        }
-
-        .feature-card p {
-            color: #666;
-            font-size: 16px;
-        }
-
-        /* How It Works */
-        .how-it-works {
-            padding: 100px 0;
-            background: linear-gradient(135deg, #f0fdfa 0%, #fef3f2 100%);
-        }
-
         .steps {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 40px;
             margin-top: 60px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .step {
             text-align: center;
+            position: relative;
+        }
+
+        .step::after {
+            content: '→';
+            position: absolute;
+            right: -20px;
+            top: 30px;
+            font-size: 32px;
+            color: #2DD4BF;
+            opacity: 0.3;
+        }
+
+        .step:last-child::after {
+            display: none;
         }
 
         .step-number {
-            width: 60px;
-            height: 60px;
-            background: #2DD4BF;
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #2DD4BF 0%, #34D399 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -209,55 +350,44 @@
             font-weight: bold;
             margin: 0 auto 20px;
             color: #fff;
+            box-shadow: 0 8px 16px rgba(45, 212, 191, 0.3);
         }
 
         .step h3 {
-            font-size: 22px;
+            font-size: 20px;
             margin-bottom: 12px;
             color: #1a1a1a;
         }
 
         .step p {
             color: #666;
+            font-size: 15px;
         }
 
-        /* Social Proof */
-        .social-proof {
-            padding: 80px 0;
-            background: #fff;
-            text-align: center;
-        }
-
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 80px;
-            flex-wrap: wrap;
-            margin-top: 40px;
-        }
-
-        .stat {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 48px;
-            font-weight: bold;
-            color: #2DD4BF;
-            margin-bottom: 8px;
-        }
-
-        .stat-label {
-            color: #666;
-            font-size: 18px;
-        }
-
-        /* Final CTA */
+/* Final CTA */
         .final-cta {
             padding: 100px 0;
             text-align: center;
-            background: linear-gradient(135deg, #2DD4BF 0%, #34D399 100%);
+            background: linear-gradient(135deg, #FF6B5E 0%, #FF8FAB 50%, #2DD4BF 100%);
             color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 15s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.1); opacity: 0.5; }
         }
 
         .final-cta h2 {
@@ -265,20 +395,28 @@
             font-weight: 700;
             margin-bottom: 20px;
             color: #fff;
+            position: relative;
+            z-index: 1;
         }
 
         .final-cta p {
             font-size: 20px;
-            color: rgba(255, 255, 255, 0.9);
+            color: rgba(255, 255, 255, 0.95);
             margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
         }
 
         .final-cta .btn-primary {
-            background: #FF6B5E;
+            background: #fff;
+            color: #FF6B5E;
+            position: relative;
+            z-index: 1;
         }
 
         .final-cta .btn-primary:hover {
-            background: #ff5547;
+            background: rgba(255, 255, 255, 0.95);
+            color: #FF6B5E;
         }
 
         .final-cta .btn-secondary {
@@ -361,37 +499,58 @@
 
     <section class="features">
         <div class="container">
-            <h2 class="section-title">Everything You Need to Train Anywhere</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🗺️</div>
-                    <h3>Discover Gyms Worldwide</h3>
-                    <p>Interactive map showing gyms near you with real-time availability, equipment lists, and honest reviews from fellow lifters.</p>
+            <!-- Main Features - Big and Bold -->
+            <div class="main-features">
+                <div class="main-feature-card discover">
+                    <div class="feature-content">
+                        <div class="feature-number">01</div>
+                        <h3>🌍 Discover Gyms Worldwide</h3>
+                        <p>Explore gyms on an interactive map. From Tokyo to Toronto, find your perfect workout spot in seconds.</p>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">✅</div>
-                    <h3>Verify Equipment</h3>
-                    <p>Know exactly what's available before you go. Filter by squat racks, deadlift platforms, cable machines, and more.</p>
+                
+                <div class="main-feature-card reviews">
+                    <div class="feature-content">
+                        <div class="feature-number">02</div>
+                        <h3>⭐ Real Reviews & Equipment</h3>
+                        <p>See what's inside before you go. Equipment lists, photos, and honest reviews from real gym-goers.</p>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⭐</div>
-                    <h3>Community Reviews</h3>
-                    <p>Real ratings from real gym-goers. Find out about cleanliness, crowd levels, and whether the gym culture matches your vibe.</p>
+                
+                <div class="main-feature-card stamps">
+                    <div class="feature-content">
+                        <div class="feature-number">03</div>
+                        <h3>🎫 Visit & Earn City Stamps</h3>
+                        <p>Check in at gyms to collect passport stamps for each city. Track your fitness journey around the world.</p>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📍</div>
-                    <h3>Check-In & Track</h3>
-                    <p>Log your workouts and build your fitness passport. Earn stamps for each new city and level up your traveler status.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">❤️</div>
-                    <h3>Save Your Favorites</h3>
-                    <p>Create custom lists of gyms you love. Organize by city, workout type, or any way that works for you.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🏆</div>
-                    <h3>Earn Rewards</h3>
-                    <p>Level up from Beginner to Champion by checking in, reviewing gyms, and helping the community grow.</p>
+            </div>
+
+            <!-- Secondary Features - Quick Highlights -->
+            <div class="secondary-features">
+                <h3 class="secondary-title">More Features to Keep You Moving</h3>
+                <div class="quick-features">
+                    <div class="quick-feature">
+                        <span class="quick-icon">❤️</span>
+                        <div>
+                            <strong>Save Favorites</strong>
+                            <p>Build your go-to gym list</p>
+                        </div>
+                    </div>
+                    <div class="quick-feature">
+                        <span class="quick-icon">🔍</span>
+                        <div>
+                            <strong>Filter by Type</strong>
+                            <p>CrossFit, powerlifting, yoga & more</p>
+                        </div>
+                    </div>
+                    <div class="quick-feature">
+                        <span class="quick-icon">✓</span>
+                        <div>
+                            <strong>Verify & Earn</strong>
+                            <p>Contribute to the community, gain points</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -425,27 +584,7 @@
         </div>
     </section>
 
-    <section class="social-proof">
-        <div class="container">
-            <h2 class="section-title">Join the Community</h2>
-            <div class="stats">
-                <div class="stat">
-                    <div class="stat-number">10K+</div>
-                    <div class="stat-label">Gyms Listed</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">50K+</div>
-                    <div class="stat-label">Active Users</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">150+</div>
-                    <div class="stat-label">Countries</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="final-cta" id="download">
+<section class="final-cta" id="download">
         <div class="container">
             <h2>Ready to Smash It Anywhere?</h2>
             <p>Download LiftAway and never let travel disrupt your gains again.</p>
