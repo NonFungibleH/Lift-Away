@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiftAway - Find Your Perfect Gym Anywhere</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #fff;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2DD4BF;
+        }
+
+        .nav-cta {
+            background: #FF6B5E;
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .nav-cta:hover {
+            background: #ff5547;
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0 100px;
+            text-align: center;
+            background: linear-gradient(135deg, #f0fdfa 0%, #fef3f2 100%);
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 800;
+            margin-bottom: 24px;
+            line-height: 1.2;
+            color: #1a1a1a;
+        }
+
+        .hero .highlight {
+            color: #2DD4BF;
+        }
+
+        .hero p {
+            font-size: 22px;
+            color: #666;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #FF6B5E;
+            color: #fff;
+            padding: 16px 40px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(255, 107, 94, 0.2);
+        }
+
+        .btn-primary:hover {
+            background: #ff5547;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255, 107, 94, 0.3);
+        }
+
+        .btn-secondary {
+            background: #fff;
+            color: #2DD4BF;
+            padding: 16px 40px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            border: 2px solid #2DD4BF;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: #f0fdfa;
+            transform: translateY(-2px);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            background: #fff;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 60px;
+            color: #1a1a1a;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 16px;
+            border: 2px solid #e5e5e5;
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            border-color: #2DD4BF;
+            box-shadow: 0 8px 24px rgba(45, 212, 191, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 24px;
+            margin-bottom: 12px;
+            color: #1a1a1a;
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f0fdfa 0%, #fef3f2 100%);
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .step {
+            text-align: center;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: #2DD4BF;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: bold;
+            margin: 0 auto 20px;
+            color: #fff;
+        }
+
+        .step h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+            color: #1a1a1a;
+        }
+
+        .step p {
+            color: #666;
+        }
+
+        /* Social Proof */
+        .social-proof {
+            padding: 80px 0;
+            background: #fff;
+            text-align: center;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: bold;
+            color: #2DD4BF;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 18px;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #2DD4BF 0%, #34D399 100%);
+            color: #fff;
+        }
+
+        .final-cta h2 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .final-cta p {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 40px;
+        }
+
+        .final-cta .btn-primary {
+            background: #FF6B5E;
+        }
+
+        .final-cta .btn-primary:hover {
+            background: #ff5547;
+        }
+
+        .final-cta .btn-secondary {
+            background: #fff;
+            color: #2DD4BF;
+            border-color: #fff;
+        }
+
+        .final-cta .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid #e5e5e5;
+            text-align: center;
+            background: #fff;
+        }
+
+        footer p {
+            color: #666;
+        }
+
+        footer a {
+            color: #2DD4BF;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .stats {
+                gap: 40px;
+            }
+
+            .final-cta h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">💪 LiftAway</div>
+            <a href="#download" class="nav-cta">Download Now</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Never Skip Leg Day,<br><span class="highlight">No Matter Where You Are</span></h1>
+            <p>Find, rate, and discover gyms worldwide. Keep smashing your fitness goals whether you're across town or across the globe.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn-primary">
+                    📱 Download for iOS
+                </a>
+                <a href="#" class="btn-primary">
+                    🤖 Download for Android
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Everything You Need to Train Anywhere</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🗺️</div>
+                    <h3>Discover Gyms Worldwide</h3>
+                    <p>Interactive map showing gyms near you with real-time availability, equipment lists, and honest reviews from fellow lifters.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✅</div>
+                    <h3>Verify Equipment</h3>
+                    <p>Know exactly what's available before you go. Filter by squat racks, deadlift platforms, cable machines, and more.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⭐</div>
+                    <h3>Community Reviews</h3>
+                    <p>Real ratings from real gym-goers. Find out about cleanliness, crowd levels, and whether the gym culture matches your vibe.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📍</div>
+                    <h3>Check-In & Track</h3>
+                    <p>Log your workouts and build your fitness passport. Earn stamps for each new city and level up your traveler status.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">❤️</div>
+                    <h3>Save Your Favorites</h3>
+                    <p>Create custom lists of gyms you love. Organize by city, workout type, or any way that works for you.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Earn Rewards</h3>
+                    <p>Level up from Beginner to Champion by checking in, reviewing gyms, and helping the community grow.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Search Your Location</h3>
+                    <p>Open the app and see gyms near you on an interactive map</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Check the Details</h3>
+                    <p>View equipment lists, photos, reviews, and pricing information</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Visit & Check In</h3>
+                    <p>Go train, check in to earn points, and collect city stamps</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Share Your Review</h3>
+                    <p>Help fellow travelers by rating your experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="social-proof">
+        <div class="container">
+            <h2 class="section-title">Join the Community</h2>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number">10K+</div>
+                    <div class="stat-label">Gyms Listed</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">50K+</div>
+                    <div class="stat-label">Active Users</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Countries</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta" id="download">
+        <div class="container">
+            <h2>Ready to Smash It Anywhere?</h2>
+            <p>Download LiftAway and never let travel disrupt your gains again.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn-primary">
+                    📱 Get it on iOS
+                </a>
+                <a href="#" class="btn-primary">
+                    🤖 Get it on Android
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 LiftAway. Built for travelers who never skip leg day.</p>
+            <p style="margin-top: 12px;">
+                <a href="#">Privacy Policy</a> • 
+                <a href="#">Terms of Service</a> • 
+                <a href="#">Contact</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
