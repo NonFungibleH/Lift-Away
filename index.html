@@ -32,16 +32,17 @@
 
         nav {
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
-            gap: 20px;
-            padding: 20px 0;
         }
 
         .nav-menu {
             display: flex;
             gap: 32px;
             align-items: center;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         .nav-menu a {
@@ -60,6 +61,7 @@
             font-size: 28px;
             font-weight: bold;
             color: #2DD4BF;
+            text-decoration: none;
         }
 
         .nav-cta {
@@ -507,7 +509,11 @@
             }
 
             .nav-menu {
+                position: static;
+                transform: none;
                 gap: 16px;
+                flex-wrap: wrap;
+                justify-content: center;
             }
 
             .nav-menu a {
