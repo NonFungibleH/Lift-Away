@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Support - LiftAway</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #fff;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2DD4BF;
+            text-decoration: none;
+        }
+
+        .nav-link {
+            color: #666;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #2DD4BF;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 60px 0 40px;
+            text-align: center;
+            background: linear-gradient(135deg, #f0fdfa 0%, #fef3f2 100%);
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1a1a1a;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Content */
+        .content {
+            padding: 80px 0;
+        }
+
+        .support-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 80px;
+        }
+
+        .support-section h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: #1a1a1a;
+        }
+
+        .support-section p {
+            color: #666;
+            margin-bottom: 24px;
+            font-size: 16px;
+        }
+
+        /* Contact Options */
+        .contact-options {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .contact-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 20px;
+            background: #f9fafb;
+            border-radius: 12px;
+            border: 2px solid #e5e5e5;
+            transition: all 0.3s;
+        }
+
+        .contact-card:hover {
+            border-color: #2DD4BF;
+            background: #f0fdfa;
+        }
+
+        .contact-icon {
+            font-size: 32px;
+            flex-shrink: 0;
+        }
+
+        .contact-info h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: #1a1a1a;
+        }
+
+        .contact-info p {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .contact-info a {
+            color: #2DD4BF;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background: #f9fafb;
+            padding: 40px;
+            border-radius: 16px;
+            border: 2px solid #e5e5e5;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #1a1a1a;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e5e5e5;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #2DD4BF;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            background: #FF6B5E;
+            color: #fff;
+            padding: 14px 32px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background: #ff5547;
+            transform: translateY(-1px);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            max-width: 900px;
+            margin: 0 auto 80px;
+        }
+
+        .faq-section h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #1a1a1a;
+        }
+
+        .faq-item {
+            margin-bottom: 24px;
+            background: #fff;
+            border: 2px solid #e5e5e5;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px 24px;
+            background: #f9fafb;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #1a1a1a;
+            transition: background 0.3s;
+        }
+
+        .faq-question:hover {
+            background: #f0fdfa;
+        }
+
+        .faq-icon {
+            font-size: 20px;
+            color: #2DD4BF;
+        }
+
+        .faq-answer {
+            padding: 0 24px 20px;
+            color: #666;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        /* Help Resources */
+        .help-resources {
+            background: linear-gradient(135deg, #f0fdfa 0%, #fef3f2 100%);
+            padding: 60px 0;
+            margin-bottom: 80px;
+        }
+
+        .help-resources h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #1a1a1a;
+        }
+
+        .help-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .help-card {
+            background: #fff;
+            padding: 32px;
+            border-radius: 16px;
+            border: 2px solid #e5e5e5;
+            transition: all 0.3s;
+        }
+
+        .help-card:hover {
+            transform: translateY(-4px);
+            border-color: #2DD4BF;
+            box-shadow: 0 8px 24px rgba(45, 212, 191, 0.1);
+        }
+
+        .help-card-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+
+        .help-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #1a1a1a;
+        }
+
+        .help-card p {
+            color: #666;
+            margin: 0;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid #e5e5e5;
+            text-align: center;
+            background: #fff;
+        }
+
+        footer p {
+            color: #666;
+        }
+
+        footer a {
+            color: #2DD4BF;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .support-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .contact-form {
+                padding: 24px;
+            }
+
+            .help-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">💪 LiftAway</a>
+            <a href="index.html" class="nav-link">Back to Home</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>We're Here to Help</h1>
+            <p>Have questions? Need support? Want to share feedback? We'd love to hear from you.</p>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="container">
+            <div class="support-grid">
+                <!-- Contact Options -->
+                <div class="support-section">
+                    <h2>Get in Touch</h2>
+                    <p>Choose the best way to reach us. We typically respond within 24 hours.</p>
+                    
+                    <div class="contact-options">
+                        <div class="contact-card">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-info">
+                                <h3>General Support</h3>
+                                <p><a href="mailto:support@liftaway.app">support@liftaway.app</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">🐛</div>
+                            <div class="contact-info">
+                                <h3>Report a Bug</h3>
+                                <p><a href="mailto:bugs@liftaway.app">bugs@liftaway.app</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">💡</div>
+                            <div class="contact-info">
+                                <h3>Feature Requests</h3>
+                                <p><a href="mailto:features@liftaway.app">features@liftaway.app</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">🏢</div>
+                            <div class="contact-info">
+                                <h3>Business Inquiries</h3>
+                                <p><a href="mailto:business@liftaway.app">business@liftaway.app</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="support-section">
+                    <h2>Send Us a Message</h2>
+                    <div class="contact-form">
+                        <form action="mailto:support@liftaway.app" method="post" enctype="text/plain">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="type">What can we help you with?</label>
+                                <select id="type" name="type" required>
+                                    <option value="">Select an option</option>
+                                    <option value="general">General Question</option>
+                                    <option value="bug">Report a Bug</option>
+                                    <option value="feature">Feature Request</option>
+                                    <option value="account">Account Issue</option>
+                                    <option value="gym">Gym Information</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" required placeholder="Tell us how we can help..."></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    How do I check in to a gym?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Open the app, find the gym on the map or search for it, tap on the gym listing, and hit the "Check In" button. You'll earn a city stamp and points for each check-in!
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    How do passport stamps work?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Every time you check in to a gym in a new city, you'll earn a passport stamp for that city. Collect stamps from cities around the world and track your fitness journey!
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    How do I add a gym that's missing?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Tap the "Add Gym" button in the app, enter the gym's details including name, address, and equipment available. You'll earn points for contributing to the community!
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Is LiftAway free to use?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Yes! LiftAway is free to download and use. All core features including gym discovery, check-ins, reviews, and passport stamps are completely free.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Can I use LiftAway offline?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    You can view your saved favorites and passport stamps offline. However, searching for new gyms, checking in, and posting reviews require an internet connection.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    How do I delete my account?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Go to Settings > Account > Delete Account. This will permanently remove all your data, including reviews, check-ins, and passport stamps. This action cannot be undone.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Help Resources -->
+    <section class="help-resources">
+        <div class="container">
+            <h2>Quick Help Resources</h2>
+            <div class="help-grid">
+                <div class="help-card">
+                    <div class="help-card-icon">📱</div>
+                    <h3>Getting Started</h3>
+                    <p>New to LiftAway? Learn the basics of finding gyms, checking in, and earning stamps.</p>
+                </div>
+
+                <div class="help-card">
+                    <div class="help-card-icon">🏋️</div>
+                    <h3>For Gym Owners</h3>
+                    <p>Want to claim or update your gym's listing? We make it easy to keep your info current.</p>
+                </div>
+
+                <div class="help-card">
+                    <div class="help-card-icon">🌍</div>
+                    <h3>Travel Tips</h3>
+                    <p>Heading somewhere new? Tips for finding the best gyms in unfamiliar cities.</p>
+                </div>
+
+                <div class="help-card">
+                    <div class="help-card-icon">⭐</div>
+                    <h3>Review Guidelines</h3>
+                    <p>Help the community by writing honest, helpful reviews that other travelers can trust.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 LiftAway by 3uild LLC. Built for travelers who never skip leg day.</p>
+            <p style="margin-top: 12px;">
+                <a href="privacy-policy.html">Privacy Policy</a> • 
+                <a href="terms-of-service.html">Terms of Service</a> • 
+                <a href="contact.html">Contact</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            // Close all FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Open clicked item if it wasn't active
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
