@@ -1,0 +1,92 @@
+{
+  "posts": [
+    {
+      "id": "flying-with-supplements-airport-security",
+      "title": "Flying With Supplements: What You Can (and Can't) Bring Through Airport Security",
+      "excerpt": "Travelling is supposed to be easy, exciting, and refreshing — not a stressful battle with airport security over a tub of protein. Here's everything you need to know about flying with supplements.",
+      "category": "Travel Guide",
+      "date": "2024-12-13",
+      "readTime": "10 min read",
+      "emoji": "✈️",
+      "url": "flying-with-supplements-airport-security.html",
+      "featured": false
+    },
+    {
+      "id": "tokyo-gyms",
+      "title": "5 Best Gyms in Tokyo for Travelers: Your Complete Training Guide",
+      "excerpt": "Tokyo can be overwhelming for first-time visitors, especially when you're trying to maintain your training routine. After spending three months exploring the city's fitness scene, I've narrowed down the absolute best spots for travelers who refuse to skip leg day.",
+      "category": "Travel Guide",
+      "date": "2024-12-11",
+      "readTime": "5 min read",
+      "emoji": "🗾",
+      "url": "tokyo-gyms.html",
+      "featured": true
+    },
+    {
+      "id": "digital-nomad-gyms",
+      "title": "How to Find Gyms as a Digital Nomad",
+      "excerpt": "Moving to a new city every month? Here's how I maintain my training split without missing a beat, from Bali to Barcelona.",
+      "category": "Digital Nomad",
+      "date": "2024-12-08",
+      "readTime": "4 min read",
+      "emoji": "💼",
+      "url": "#",
+      "featured": false
+    },
+    {
+      "id": "hotel-gyms-program",
+      "title": "Adapting Your Program to Hotel Gyms",
+      "excerpt": "Stuck with limited equipment? Here's how to modify your program without sacrificing progress during short trips.",
+      "category": "Training Tips",
+      "date": "2024-12-05",
+      "readTime": "6 min read",
+      "emoji": "🏋️",
+      "url": "#",
+      "featured": false
+    },
+    {
+      "id": "gym-culture-worldwide",
+      "title": "Gym Etiquette Around the World",
+      "excerpt": "What's normal in one country might be rude in another. Learn the unwritten rules of gym culture across different regions.",
+      "category": "Gym Culture",
+      "date": "2024-12-01",
+      "readTime": "5 min read",
+      "emoji": "🌍",
+      "url": "#",
+      "featured": false
+    },
+    {
+      "id": "lisbon-hidden-gyms",
+      "title": "Hidden Gem Gyms in Lisbon",
+      "excerpt": "Skip the touristy spots. These local gyms offer better equipment, friendly communities, and authentic Portuguese energy.",
+      "category": "Travel Guide",
+      "date": "2024-11-28",
+      "readTime": "4 min read",
+      "emoji": "✈️",
+      "url": "#",
+      "featured": false
+    },
+    {
+      "id": "carry-on-gym-gear",
+      "title": "Essential Gym Gear for Carry-On Only Travel",
+      "excerpt": "Everything you need to train anywhere in the world, packed into a single carry-on bag. No checked luggage required.",
+      "category": "Packing Tips",
+      "date": "2024-11-25",
+      "readTime": "5 min read",
+      "emoji": "🎒",
+      "url": "#",
+      "featured": false
+    },
+    {
+      "id": "budget-gym-passes",
+      "title": "Finding Affordable Day Passes in Expensive Cities",
+      "excerpt": "Training in cities like London or New York doesn't have to break the bank. Here's how to find budget-friendly options.",
+      "category": "Budget Travel",
+      "date": "2024-11-22",
+      "readTime": "4 min read",
+      "emoji": "💰",
+      "url": "#",
+      "featured": false
+    }
+  ]
+}
