@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flying With Supplements: What You Can (and Can't) Bring Through Airport Security - LiftAway Blog</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #fff;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2DD4BF;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .nav-menu a {
+            color: #666;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #2DD4BF;
+        }
+
+        .nav-menu a.active {
+            color: #2DD4BF;
+            font-weight: 600;
+        }
+
+        .nav-cta {
+            background: #FF6B5E;
+            color: #fff !important;
+            padding: 12px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .nav-cta:hover {
+            background: #ff5547;
+            transform: translateY(-1px);
+        }
+
+        /* Article Header */
+        .article-header {
+            padding: 60px 0 40px;
+            text-align: center;
+            background: linear-gradient(135deg, #f0fdfa 0%, #fef3f2 100%);
+        }
+
+        .article-category {
+            color: #2DD4BF;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+
+        .article-header h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 24px;
+            color: #1a1a1a;
+            line-height: 1.2;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            color: #666;
+            font-size: 16px;
+        }
+
+        /* Article Content */
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .article-content h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-top: 48px;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+
+        .article-content h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-top: 36px;
+            margin-bottom: 16px;
+            color: #2DD4BF;
+        }
+
+        .article-content p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 24px;
+            color: #333;
+        }
+
+        .article-content ul {
+            margin-bottom: 24px;
+            padding-left: 24px;
+        }
+
+        .article-content li {
+            font-size: 18px;
+            margin-bottom: 12px;
+            color: #333;
+        }
+
+        .article-content strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        /* Highlight Boxes */
+        .highlight-box {
+            background: linear-gradient(135deg, #f0fdfa 0%, #fef3f2 100%);
+            padding: 32px;
+            border-radius: 16px;
+            margin: 32px 0;
+            border-left: 4px solid #2DD4BF;
+        }
+
+        .highlight-box h3 {
+            margin-top: 0;
+            font-size: 20px;
+        }
+
+        .highlight-box ul {
+            margin-bottom: 0;
+        }
+
+        .highlight-box li {
+            font-size: 17px;
+        }
+
+        /* Quick Reference Table */
+        .ref-table {
+            background: #fff;
+            border: 2px solid #e5e5e5;
+            border-radius: 16px;
+            padding: 32px;
+            margin: 40px 0;
+        }
+
+        .ref-table h3 {
+            margin-top: 0;
+            margin-bottom: 24px;
+            font-size: 24px;
+            color: #1a1a1a;
+        }
+
+        .ref-section {
+            margin-bottom: 24px;
+        }
+
+        .ref-section h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #34D399;
+        }
+
+        .ref-section.not-allowed h4 {
+            color: #FF6B5E;
+        }
+
+        .ref-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .ref-section li {
+            padding-left: 24px;
+            position: relative;
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+
+        .ref-section li:before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            color: #34D399;
+            font-weight: bold;
+        }
+
+        .ref-section.not-allowed li:before {
+            content: '✘';
+            color: #FF6B5E;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background: linear-gradient(135deg, #f0fdfa 0%, #fff5f3 100%);
+            padding: 60px 40px;
+            border-radius: 24px;
+            margin: 60px 0;
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 40px;
+        }
+
+        .faq-item {
+            margin-bottom: 32px;
+        }
+
+        .faq-question {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2DD4BF;
+            margin-bottom: 8px;
+        }
+
+        .faq-answer {
+            font-size: 17px;
+            color: #333;
+            margin: 0;
+        }
+
+        /* Callout Box */
+        .callout {
+            background: #fff5f3;
+            border-left: 4px solid #FF6B5E;
+            padding: 24px;
+            margin: 32px 0;
+            border-radius: 4px;
+        }
+
+        .callout p {
+            margin: 0;
+        }
+
+        /* CTA Box */
+        .cta-box {
+            background: linear-gradient(135deg, #FF6B5E 0%, #FF8FAB 50%, #2DD4BF 100%);
+            padding: 48px;
+            border-radius: 24px;
+            text-align: center;
+            margin: 60px 0;
+            color: white;
+        }
+
+        .cta-box h3 {
+            font-size: 28px;
+            margin-bottom: 16px;
+            color: white;
+        }
+
+        .cta-box p {
+            font-size: 18px;
+            margin-bottom: 24px;
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .cta-box .btn {
+            background: white;
+            color: #FF6B5E;
+            padding: 16px 40px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .cta-box .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+        }
+
+        /* Back to Blog */
+        .back-to-blog {
+            text-align: center;
+            padding: 60px 0;
+            border-top: 1px solid #e5e5e5;
+        }
+
+        .back-to-blog a {
+            color: #2DD4BF;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 18px;
+        }
+
+        .back-to-blog a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid #e5e5e5;
+            text-align: center;
+            background: #fff;
+        }
+
+        footer p {
+            color: #666;
+        }
+
+        footer a {
+            color: #2DD4BF;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .article-header h1 {
+                font-size: 32px;
+            }
+
+            .article-content h2 {
+                font-size: 26px;
+            }
+
+            .article-content h3 {
+                font-size: 20px;
+            }
+
+            .article-content p,
+            .article-content li {
+                font-size: 16px;
+            }
+
+            .nav-menu {
+                position: static;
+                transform: none;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 16px;
+            }
+
+            .highlight-box,
+            .ref-table {
+                padding: 24px;
+            }
+
+            .faq-section {
+                padding: 40px 24px;
+            }
+
+            .cta-box {
+                padding: 32px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="../index.html" class="logo">💪 LiftAway</a>
+            <div class="nav-menu">
+                <a href="../pages/about.html">About</a>
+                <a href="index.html" class="active">Blog</a>
+                <a href="../pages/contact.html">Contact</a>
+            </div>
+            <a href="../index.html#download" class="nav-cta">Download</a>
+        </nav>
+    </header>
+
+    <section class="article-header">
+        <div class="container">
+            <div class="article-category">TRAVEL GUIDE</div>
+            <h1>Flying With Supplements: What You Can (and Can't) Bring Through Airport Security</h1>
+            <div class="article-meta">
+                <span>10 min read</span>
+                <span>•</span>
+                <span>December 13, 2024</span>
+            </div>
+        </div>
+    </section>
+
+    <article class="article-content">
+        <p>Travelling is supposed to be easy, exciting, and refreshing — not a stressful battle with airport security over a tub of protein. Yet if you train consistently, take supplements daily, or simply like staying on track while you're away, flying with your nutrition can feel like a minefield.</p>
+
+        <p>Can you bring protein powder on a plane? What about creatine? Will TSA or EU security pull you aside for pre-workout? And what happens if everything is in unlabelled bags?</p>
+
+        <p>In this guide, we break down exactly what you can (and can't) bring through airport security, how to pack your supplements safely, and the rules you need to know for the US, the UK, the EU, and international travel.</p>
+
+        <h2>Why Travellers Bring Supplements in the First Place</h2>
+
+        <p>Anyone who trains regularly knows: travelling throws your routine completely off. Protein intake drops. Sleep changes. Hydration is all over the place. And finding a good gym can feel like a guessing game — unless you're using LiftAway, but more on that later.</p>
+
+        <p>Supplements help fill the gaps:</p>
+
+        <ul>
+            <li><strong>Protein powder</strong> supports nutrition when meals vary</li>
+            <li><strong>Creatine</strong> maintains consistency and performance</li>
+            <li><strong>Vitamins and minerals</strong> help with immunity on long flights</li>
+            <li><strong>Greens powders</strong> support digestion after unfamiliar foods</li>
+            <li><strong>Electrolytes</strong> stop the "holiday dehydration headache"</li>
+        </ul>
+
+        <p>So bringing them with you simply makes sense.</p>
+
+        <h2>1. TSA & EU Airport Rules: The Simple Version</h2>
+
+        <p>Let's start with the quick, clear answer — the one most travellers search for:</p>
+
+        <div class="highlight-box">
+            <h3>💡 Quick Reference</h3>
+            <ul>
+                <li><strong>Powders (protein, creatine, pre-workout):</strong> Allowed. TSA allows powders under 350g (12oz) in hand luggage without issue. The EU/UK has no specific weight limit, but may scan them separately.</li>
+                <li><strong>Pills, tablets, capsules:</strong> Fully allowed. No prescription needed, no limits, can go in any bag.</li>
+                <li><strong>Liquids:</strong> Must be 100ml or less. Applies to the US, EU, UK, and nearly all international airports. Must fit in your 1-litre liquids bag.</li>
+                <li><strong>Softgels technically count as liquids</strong> but in reality, they rarely get flagged.</li>
+                <li><strong>Any unlabelled white powder can be questioned</strong> — not confiscated, but often tested. Avoid mystery bags.</li>
+            </ul>
+        </div>
+
+        <p>That's the short version. Now let's break it down by supplement type.</p>
+
+        <h2>2. Flying With Protein Powder</h2>
+
+        <p>Good news: protein powder is absolutely allowed in both carry-on and checked luggage.</p>
+
+        <h3>Carry-On (TSA):</h3>
+        <ul>
+            <li>Under 350g: goes straight through</li>
+            <li>Over 350g: may be swabbed for testing</li>
+            <li>Huge tubs: will slow you down</li>
+        </ul>
+
+        <h3>Carry-On (EU/UK):</h3>
+        <ul>
+            <li>No set limit for powders</li>
+            <li>Must go through X-ray/screening</li>
+        </ul>
+
+        <h3>Best way to pack protein:</h3>
+        <ul>
+            <li>Pre-portion into small labelled containers</li>
+            <li>Or buy single-serve sachets</li>
+            <li>Use rigid containers to avoid crushing</li>
+        </ul>
+
+        <div class="callout">
+            <p><strong>Pro tip:</strong> If you're training on your holiday, you can usually find a gym easily with LiftAway — so you may not need to bring as much protein as you think.</p>
+        </div>
+
+        <h2>3. Flying With Creatine</h2>
+
+        <p>Creatine is the supplement that gets flagged most often, purely because it looks like… well, something else.</p>
+
+        <p>But security sees creatine every day — it's allowed.</p>
+
+        <h3>Tips to avoid hassle:</h3>
+        <ul>
+            <li>Keep it in its original tub or packaging</li>
+            <li>Bring realistic amounts (1–3 weeks' worth)</li>
+            <li>Label any travel containers</li>
+            <li>Consider putting it in checked baggage if you're carrying a lot</li>
+        </ul>
+
+        <h2>4. Flying With Pre-Workout</h2>
+
+        <p>Pre-workout is allowed, but it's also the supplement that security officers tend to sniff (literally and figuratively).</p>
+
+        <p>Powders with strong smells, colours, or stimulants can attract attention — but they're still legal to bring.</p>
+
+        <h3>How to pack pre-workout safely:</h3>
+        <ul>
+            <li>Use small, clearly labelled containers</li>
+            <li>Don't mix powders (it looks suspicious)</li>
+            <li>Stick packs or sachets are ideal</li>
+            <li>Avoid bringing a full tub in your carry-on</li>
+        </ul>
+
+        <h2>5. Flying With Vitamins, Pills & Capsules</h2>
+
+        <p>The easiest supplement category.</p>
+
+        <h3>Fully allowed:</h3>
+        <ul>
+            <li>Multivitamins</li>
+            <li>Omega-3</li>
+            <li>Magnesium</li>
+            <li>Zinc</li>
+            <li>Electrolytes</li>
+            <li>Collagen tablets</li>
+            <li>Probiotics</li>
+            <li>Sleep aids</li>
+            <li>Greens capsules</li>
+        </ul>
+
+        <p>Airport security doesn't consider pills to be a risk, so they rarely get checked.</p>
+
+        <h3>Packing tips:</h3>
+        <ul>
+            <li>A pill organiser is fine</li>
+            <li>But keep the original label somewhere if possible</li>
+            <li>Pack what you realistically need — not your entire cupboard</li>
+        </ul>
+
+        <h2>6. Flying With Liquid Supplements</h2>
+
+        <p>This category includes:</p>
+        <ul>
+            <li>Vitamin D drops</li>
+            <li>Herbal tinctures</li>
+            <li>Liquid magnesium</li>
+            <li>Collagen shots</li>
+            <li>Sleep sprays</li>
+            <li>Greens shots</li>
+            <li>Liquid amino acids</li>
+        </ul>
+
+        <h3>Carry-on rules:</h3>
+        <p>Anything over 100ml must go into checked luggage, even if the bottle is half empty.</p>
+
+        <h3>Checked bag rules:</h3>
+        <ul>
+            <li>No size limit</li>
+            <li>Always seal liquids in a double bag to prevent leaks</li>
+        </ul>
+
+        <h2>7. What About Customs? (International Travel)</h2>
+
+        <p>Airport security cares about safety. Customs cares about legality.</p>
+
+        <p>Most everyday fitness supplements are fine internationally, but a few countries are strict:</p>
+
+        <ul>
+            <li><strong>Australia/NZ</strong> → strict on herbal powders</li>
+            <li><strong>Japan</strong> → limits stimulants (certain pre-workouts banned)</li>
+            <li><strong>UAE</strong> → restricted botanicals</li>
+            <li><strong>Singapore</strong> → tough on certain extracts</li>
+        </ul>
+
+        <p>If your supplement contains ingredients you can't pronounce, it's worth a quick check before you fly.</p>
+
+        <h2>8. How to Pack Supplements So They Don't Cause Delays</h2>
+
+        <ol style="padding-left: 24px;">
+            <li style="margin-bottom: 16px;"><strong>Keep labels, even if you transfer to smaller containers.</strong> A simple sticker saying "Protein Powder – Chocolate" goes a long way.</li>
+            <li style="margin-bottom: 16px;"><strong>Bring only what you actually need.</strong> Your gym sessions will be easy to manage with LiftAway, so you might not need your entire supplement routine.</li>
+            <li style="margin-bottom: 16px;"><strong>Double-bag powders.</strong> Powder spills + clothes = a bad travel day.</li>
+            <li style="margin-bottom: 16px;"><strong>Keep powders near the top of your bag.</strong> Security may ask you to take them out.</li>
+            <li style="margin-bottom: 16px;"><strong>Never mix supplements together.</strong> Two powders blended into one unmarked jar is a guaranteed swab test.</li>
+        </ol>
+
+        <div class="ref-table">
+            <h3>9. Quick Reference: What You Can Bring Through Airport Security</h3>
+            
+            <div class="ref-section">
+                <h4>✔ Allowed in Carry-On</h4>
+                <ul>
+                    <li>Protein powder</li>
+                    <li>Creatine</li>
+                    <li>Pre-workout</li>
+                    <li>Vitamins & capsules</li>
+                    <li>Softgels</li>
+                    <li>Electrolyte packets</li>
+                    <li>Greens powder</li>
+                    <li>Collagen powder</li>
+                </ul>
+            </div>
+
+            <div class="ref-section">
+                <h4>✔ Allowed in Checked Baggage</h4>
+                <ul>
+                    <li>Any powder amount</li>
+                    <li>Liquid supplements over 100ml</li>
+                </ul>
+            </div>
+
+            <div class="ref-section not-allowed">
+                <h4>✘ Not Allowed</h4>
+                <ul>
+                    <li>Supplements containing banned ingredients</li>
+                    <li>Unmarked, unlabelled powders (may be confiscated)</li>
+                    <li>Suspicious herbal blends not permitted in destination country</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2>10. FAQs</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">Can you fly with supplements in your hand luggage?</div>
+                <p class="faq-answer">Yes. Powders, pills, and liquids under 100ml are all allowed.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can TSA confiscate creatine?</div>
+                <p class="faq-answer">They can test it, but if it's clearly labelled, it's rarely an issue.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Do powders need to go in the liquids bag?</div>
+                <p class="faq-answer">No. Powders and solids have their own category.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I bring protein powder in a Ziploc bag?</div>
+                <p class="faq-answer">Yes, but it's much safer to label it clearly.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Is pre-workout illegal to fly with?</div>
+                <p class="faq-answer">No — but stimulant-heavy blends may be tested.</p>
+            </div>
+        </div>
+
+        <div class="cta-box">
+            <h3>Travel Smart, Train Well</h3>
+            <p>Flying with supplements really isn't complicated once you understand the rules. With smart packing and clear labelling, you can take everything you need to stay on track with your fitness goals.</p>
+            <p>And when you land, staying consistent is even easier. Whether you want a gym near your hotel, something open 24/7, a place with proper free weights, or just a spot with decent cardio equipment — LiftAway shows you the best gyms nearby, rated by real travellers.</p>
+            <a href="../index.html#download" class="btn">Download LiftAway</a>
+        </div>
+    </article>
+
+    <div class="back-to-blog">
+        <a href="index.html">← Back to all posts</a>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 LiftAway by 3uild LLC. Built for travelers who never skip leg day.</p>
+            <p style="margin-top: 12px;">
+                <a href="../pages/privacy-policy.html">Privacy Policy</a> • 
+                <a href="../pages/terms-of-service.html">Terms of Service</a> • 
+                <a href="../pages/contact.html">Contact</a>
+            </p>
+            <p style="margin-top: 16px;">
+                <a href="#" style="display: inline-block; text-decoration: none;" title="Follow us on Instagram" aria-label="Instagram">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="#2DD4BF"/>
+                    </svg>
+                </a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
