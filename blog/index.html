@@ -32,10 +32,8 @@
 
         nav {
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
-            gap: 20px;
-            padding: 20px 0;
         }
 
         .logo {
@@ -49,6 +47,9 @@
             display: flex;
             gap: 32px;
             align-items: center;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         .nav-menu a {
@@ -66,6 +67,21 @@
         .nav-menu a.active {
             color: #2DD4BF;
             font-weight: 600;
+        }
+
+        .nav-cta {
+            background: #FF6B5E;
+            color: #fff !important;
+            padding: 12px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .nav-cta:hover {
+            background: #ff5547;
+            transform: translateY(-1px);
         }
 
         .nav-cta {
@@ -303,8 +319,8 @@
                 <a href="../pages/about.html">About</a>
                 <a href="index.html" class="active">Blog</a>
                 <a href="../pages/contact.html">Contact</a>
-                <a href="../index.html#download">Download</a>
             </div>
+            <a href="../index.html#download" class="nav-cta">Download</a>
         </nav>
     </header>
 
@@ -318,112 +334,90 @@
     <section class="blog-content">
         <div class="container">
             <!-- Featured Post -->
-            <div class="featured-post">
-                <div class="featured-content">
-                    <div class="blog-meta">
-                        <span class="blog-category">TRAVEL GUIDE</span>
-                        <span>•</span>
-                        <span>5 min read</span>
-                        <span>•</span>
-                        <span>Dec 11, 2024</span>
-                    </div>
-                    <h2>5 Best Gyms in Tokyo for Travelers: Your Complete Training Guide</h2>
-                    <p>Tokyo can be overwhelming for first-time visitors, especially when you're trying to maintain your training routine. After spending three months exploring the city's fitness scene, I've narrowed down the absolute best spots for travelers who refuse to skip leg day.</p>
-                    <a href="tokyo-gyms.html" class="btn-read">Read Full Guide →</a>
-                </div>
-                <div class="featured-image">
-                    🗾
-                </div>
-            </div>
+            <div id="featured-post"></div>
 
             <!-- Blog Grid -->
-            <div class="blog-grid">
-                <div class="blog-card" onclick="window.location.href='#'">
-                    <div class="blog-image">💼</div>
-                    <div class="blog-body">
-                        <div class="blog-meta">
-                            <span class="blog-category">DIGITAL NOMAD</span>
-                            <span>•</span>
-                            <span>Dec 8, 2024</span>
-                        </div>
-                        <h2>How to Find Gyms as a Digital Nomad</h2>
-                        <p class="blog-excerpt">Moving to a new city every month? Here's how I maintain my training split without missing a beat, from Bali to Barcelona.</p>
-                        <a href="#" class="read-more">Read more →</a>
-                    </div>
-                </div>
-
-                <div class="blog-card" onclick="window.location.href='#'">
-                    <div class="blog-image">🏋️</div>
-                    <div class="blog-body">
-                        <div class="blog-meta">
-                            <span class="blog-category">TRAINING TIPS</span>
-                            <span>•</span>
-                            <span>Dec 5, 2024</span>
-                        </div>
-                        <h2>Adapting Your Program to Hotel Gyms</h2>
-                        <p class="blog-excerpt">Stuck with limited equipment? Here's how to modify your program without sacrificing progress during short trips.</p>
-                        <a href="#" class="read-more">Read more →</a>
-                    </div>
-                </div>
-
-                <div class="blog-card" onclick="window.location.href='#'">
-                    <div class="blog-image">🌍</div>
-                    <div class="blog-body">
-                        <div class="blog-meta">
-                            <span class="blog-category">GYM CULTURE</span>
-                            <span>•</span>
-                            <span>Dec 1, 2024</span>
-                        </div>
-                        <h2>Gym Etiquette Around the World</h2>
-                        <p class="blog-excerpt">What's normal in one country might be rude in another. Learn the unwritten rules of gym culture across different regions.</p>
-                        <a href="#" class="read-more">Read more →</a>
-                    </div>
-                </div>
-
-                <div class="blog-card" onclick="window.location.href='#'">
-                    <div class="blog-image">✈️</div>
-                    <div class="blog-body">
-                        <div class="blog-meta">
-                            <span class="blog-category">TRAVEL GUIDE</span>
-                            <span>•</span>
-                            <span>Nov 28, 2024</span>
-                        </div>
-                        <h2>Hidden Gem Gyms in Lisbon</h2>
-                        <p class="blog-excerpt">Skip the touristy spots. These local gyms offer better equipment, friendly communities, and authentic Portuguese energy.</p>
-                        <a href="#" class="read-more">Read more →</a>
-                    </div>
-                </div>
-
-                <div class="blog-card" onclick="window.location.href='#'">
-                    <div class="blog-image">🎒</div>
-                    <div class="blog-body">
-                        <div class="blog-meta">
-                            <span class="blog-category">PACKING TIPS</span>
-                            <span>•</span>
-                            <span>Nov 25, 2024</span>
-                        </div>
-                        <h2>Essential Gym Gear for Carry-On Only Travel</h2>
-                        <p class="blog-excerpt">Everything you need to train anywhere in the world, packed into a single carry-on bag. No checked luggage required.</p>
-                        <a href="#" class="read-more">Read more →</a>
-                    </div>
-                </div>
-
-                <div class="blog-card" onclick="window.location.href='#'">
-                    <div class="blog-image">💰</div>
-                    <div class="blog-body">
-                        <div class="blog-meta">
-                            <span class="blog-category">BUDGET TRAVEL</span>
-                            <span>•</span>
-                            <span>Nov 22, 2024</span>
-                        </div>
-                        <h2>Finding Affordable Day Passes in Expensive Cities</h2>
-                        <p class="blog-excerpt">Training in cities like London or New York doesn't have to break the bank. Here's how to find budget-friendly options.</p>
-                        <a href="#" class="read-more">Read more →</a>
-                    </div>
-                </div>
-            </div>
+            <div class="blog-grid" id="blog-grid"></div>
         </div>
     </section>
+
+    <script>
+        // Fetch and render blog posts from feed.json
+        async function loadBlogPosts() {
+            try {
+                const response = await fetch('feed.json');
+                const data = await response.json();
+                
+                // Render featured post
+                const featuredPost = data.posts.find(post => post.featured);
+                if (featuredPost) {
+                    document.getElementById('featured-post').innerHTML = `
+                        <div class="featured-post">
+                            <div class="featured-content">
+                                <div class="blog-meta">
+                                    <span class="blog-category">${featuredPost.category.toUpperCase()}</span>
+                                    <span>•</span>
+                                    <span>${featuredPost.readTime}</span>
+                                    <span>•</span>
+                                    <span>${formatDate(featuredPost.date)}</span>
+                                </div>
+                                <h2>${featuredPost.title}</h2>
+                                <p>${featuredPost.excerpt}</p>
+                                <a href="${featuredPost.url}" class="btn-read">Read Full Guide →</a>
+                            </div>
+                            <div class="featured-image">
+                                ${featuredPost.emoji}
+                            </div>
+                        </div>
+                    `;
+                }
+                
+                // Render regular blog posts (non-featured)
+                const regularPosts = data.posts.filter(post => !post.featured);
+                const blogGrid = document.getElementById('blog-grid');
+                
+                regularPosts.forEach(post => {
+                    const card = document.createElement('div');
+                    card.className = 'blog-card';
+                    card.onclick = () => {
+                        if (post.url !== '#') {
+                            window.location.href = post.url;
+                        }
+                    };
+                    
+                    card.innerHTML = `
+                        <div class="blog-image">${post.emoji}</div>
+                        <div class="blog-body">
+                            <div class="blog-meta">
+                                <span class="blog-category">${post.category.toUpperCase()}</span>
+                                <span>•</span>
+                                <span>${formatDate(post.date)}</span>
+                            </div>
+                            <h2>${post.title}</h2>
+                            <p class="blog-excerpt">${post.excerpt}</p>
+                            <a href="${post.url}" class="read-more">Read more →</a>
+                        </div>
+                    `;
+                    
+                    blogGrid.appendChild(card);
+                });
+                
+            } catch (error) {
+                console.error('Error loading blog posts:', error);
+                document.getElementById('blog-grid').innerHTML = '<p style="text-align: center; color: #666;">Unable to load blog posts. Please try again later.</p>';
+            }
+        }
+        
+        // Format date nicely
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            const options = { year: 'numeric', month: 'short', day: 'numeric' };
+            return date.toLocaleDateString('en-US', options);
+        }
+        
+        // Load posts when page loads
+        loadBlogPosts();
+    </script>
 
     <footer>
         <div class="container">
